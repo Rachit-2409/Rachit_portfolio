@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="225" height="225"><svg width="225" height="225" viewBox="0 0 225 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="225" height="225" rx="112.5" fill="#010000"></rect>
+<path d="M151.5 74.4034C148 77.7367 141 84.5034 141 84.9034L173 116.903L141 149.403L151.5 159.903L194.5 116.903L151.5 74.4034Z" fill="#7C7A7A" stroke="#7C7A7A"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M125.706 92.0232L113.173 88.5715L112.111 92.4279L124.644 95.8796L125.706 92.0232ZM124.379 96.8437L111.846 93.392L96.4174 160.712L103.648 162.703L124.379 96.8437Z" fill="#FF0000"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M137.018 75.431L130.906 46.7797L111.469 68.3948L114.23 84.7338L126.769 88.1667L137.018 75.431ZM122.626 78.728C125.022 79.3879 127.559 77.7646 128.292 75.1023C129.025 72.44 127.677 69.7468 125.281 69.087C122.885 68.4271 120.348 70.0504 119.615 72.7127C118.882 75.375 120.23 78.0682 122.626 78.728Z" fill="#FF0000"></path>
+<path d="M82 97.9034V77.9034V76.4034H59.5V87.4034L42 103.903H29V125.403H40L59.5 144.903V157.903H82V134.403H65L50 120.403V110.903L65 97.9034H82Z" fill="#7C7A7A"></path>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
