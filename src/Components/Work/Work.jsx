@@ -49,9 +49,9 @@ My portfolio highlights
 </h2>
 
 
-<div className="">
-    {works.map(({imgSrc, title, tags, projectLink, label},key)=>{
-       return (<ProjectCard key={key} imgSrc={imgSrc} title={title} tags={tags} projectLink={projectLink} label={label}/> )
+<div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
+    {works.map(({imgSrc, title, tags, projectLink},key)=>{
+       return (<ProjectCard key={key} imgSrc={imgSrc} title={title} tags={tags} projectLink={projectLink} /> )
     })}
 </div>
 
