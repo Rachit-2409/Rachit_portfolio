@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.blue_CTA{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 1.25rem;
+    background: var(--CTA_blue);
+    outline: none ;
+    border: none;
+    color: var(--CTA_white);
+    transition: background ease 0.5s;
+}
+.blue_CTA:hover{
+    background: var(--CTA_blue_hover);
+}
+:root{
+    --CTA_blue : #0065ff; /*Hover Color*/
+    --CTA_white : #fff;
+    --CTA_blue_hover : #0052cc; /*Hover Color CTA*/
+    --Text_Color : #404040;
+    --Box_background : #deebff; /*CTA BOX*/
+    --text_box_color : #091e42; /*CTA Box font color*/
+
+}
+
+/*Header*/
+header{
+    height: 60px;
+    transition: box-shadow 0.3s ease-in;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background: var(--CTA_white);
+}
+header button{
+    height: 60px;
+}
+header ul {
+    gap: 1.25rem;
+    margin: 0;
+}
+header li{
+    list-style: none;
+}
+header a{
+   text-decoration: none;
+   color: var(--Text_Color); 
+   font-size: 18px;
+   
+}
+header:hover{
+    box-shadow: 0 3px 15px #2121212e;
+}
+
+p{
+    font-size: 21px;
+}
+
+li a:hover {
+    color: var(--CTA_blue_hover);
+}
+
+
+
+/*AI Box*/
+.AI_box{
+    text-align: center;
+    padding: 1rem;
+    background: var(--Box_background);
+    color: var(--text_box_color);
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+
+}
+
+.uni-padding{
+    padding: 80px 0;
+}

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary_color : #E9F7CA;
+    --secondary_color : #F7D488;
+    --third_color : #F9A03F;
+
+}
+body{
+    background-color: var(--primary_color) ;
+}
+.game_container{
+    height: 500px;
+    width: 500px;
+    border: 1px solid;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praatice</title>
+</head>
+<body>
+        <script>
+            /*Square the value of every element in the array. Presume that you will only get numbers in the input array.*/
+
+            // const input = [1, 2, 3, 4, 5];
+            // let squaredArray = input.map((value)=>{
+            //     return value*value;
+            // });
+            // console.log(squaredArray);
+
+
+
+            /*If the given input is an array of numbers, return the sum of all the positives ones. If the array is empty or there aren't any positive numbers, return 0.*/
+            // const input = [1, -4, 12, 0, -3, 29, -150];
+          
+            // if(Array.isArray(input)){
+            //     let positive_array = input.filter((value)=>{
+            //      if(value > 0){
+            //         return value
+            //     }
+            // });
+            // let total_value =  positive_array.reduce((res, cur)=> res + cur, 0 )
+            // console.log(positive_array, total_value);
+            // }
+
+
+
+            // The given input is a string of multiple words with a single space between each of them. Abbreviate the name and return the name initials.
+            // let input = "George Raymond Richard Martin";
+            // input = input.split(' ');
+            
+            // let New = input.map((value)=>{
+            //     return value[0];
+            // });
+            // console.log(New);
+            // New = New.join('');
+            // console.log(New);
+           
+            // Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
+            
+            const input = [
+  {
+    name: "John",
+    age: 13,
+  },
+  {
+    name: "Mark",
+    age: 56,
+  },
+  {
+    name: "Rachel",
+    age: 45,
+  },
+  {
+    name: "Nate",
+    age: 67,
+  },
+  {
+    name: "Jennifer",
+    age: 65,
+  },
+];
+
+
+
+let Age_box = input.filter((value)=>{
+    return Math.max(value.age);
+});
+
+console.log(Math.max(input.age))
+
+        </script>
+</body>
+</html>

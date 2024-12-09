@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Number guessing game </h1>
+        <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. <br> We'll tell you if your guess was too high or too low.</p>
+        <div>
+            <input type="number" name="guess" id="guess_number">
+            <button id="guess_button">Submit Guess</button>
+        </div>
+        <div>
+            <p>No. of Count Left <span id="Count_Counter"></span></p>
+            <p>Previous Guess : <span id="Previous_guess"></span></p>
+            <p id="guess_hint"></p>
+            <p id="Result"></p>
+        </div>
+    </div>
+
+
+   <script src="./script.js"></script>
+</body>
+</html>
