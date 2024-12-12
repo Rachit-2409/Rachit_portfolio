@@ -12,7 +12,7 @@ const About = () => {
         }
     ];
     return (
-        <section id="#about" className="section">
+        <section id="about" className="section">
             <div className="container">
                 <div className="bg-zinc-800/50 p-77 rounded-2xl md:p-16 p-8">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl">
