@@ -14,6 +14,7 @@ import { useGSAP } from '@gsap/react';
 
 
 
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const App = () => {
   useGSAP(()=>{
@@ -29,7 +30,9 @@ const App = () => {
         <Skills/>
         <Work />
         <CReview />
+     
         <Contact />
+
       </main>
 
       </ReactLenis>

@@ -22,7 +22,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w[15ch] mt-5 mb-8 lg:mb-10'> <span className='text-2xl'>Passionate Frontend Developer </span><br / >
+                    <h2 className='headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w[15ch] mt-5 mb-8 lg:mb-10'> <span className='text-xl'>Passionate Frontend Developer </span><br / >
 Turning Designs into Digital Masterpieces</h2>
 
                     <div className='flex items-center gap-3'>

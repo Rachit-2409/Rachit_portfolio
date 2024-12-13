@@ -63,13 +63,13 @@ const Contact = () => {
     <div className="md:grid md:items-center md-grid-cols-2 md:gap-2">
                 <div className="md-4">
                         <label htmlFor="name" className="label">Name</label>
-                        <input type="text" name="name" id="name" className="text-field" autoComplete="name" required placeholder="Rachit Gupta" />
+                        <input type="text" name="name" id="name" className="text-field mb-1" autoComplete="name" required placeholder="Rachit Gupta" />
 
                 </div>
 
                 <div className="mb-4">
                         <label htmlFor="email" className="label">Email</label>
-                        <input type="email" name="email" id="email" className="text-field" autoComplete="email" required placeholder="rachitgupta@gmail.com"/>
+                        <input type="email" name="email" id="email" className="text-field mb-1" autoComplete="email" required placeholder="rachitgupta@gmail.com"/>
 
                 </div>
 

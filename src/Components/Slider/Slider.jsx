@@ -1,21 +1,18 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Slider from '../Slider/Slider'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-import ReviewCard from "../ReviewCard/ReviewCard";
-const CReview = () => {
-  // useGSAP(()=>{
-  //   gsap.to('.srcub-slide', {
-  //     scrollTrigger : {
-  //       trigger : '.srcub-slide',
-  //       scrub : true
-  //     },
-  //     x: '-320'
-  //   })
-  // })
+import '../../index.css';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+import ReviewCard from '../ReviewCard/ReviewCard';
+
+export default function Slider() {
   const reviews = [
     {
       content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
@@ -54,28 +51,34 @@ const CReview = () => {
       company: 'Skyline Digital'
     }
   ];
+  const points= {
+    640: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 2,
+    }}
   return (
-    <section className="section overflow-hidden" id="reviews">
-        <div className="container">
-      <h2 className="headline-2 mb-8"> 
-        Figma Designs
-      </h2>
-      <Slider />
-      <div className="flex items-stretch gap-3 w-fit srcub-slide">
-
-     
-    {/* {
-      reviews.map(({content, imgSrc, company, name}, key)=>{
-        return(
-          <ReviewCard  content={content} imgSrc={imgSrc} name={name} company={company} key={key}/>
-        )
-      })
-    } */}
+    <>
+      <Swiper
+        // slidesPerView={2}
+        spaceBetween={30}
+        breakpoints={points}
+        pagination={{
+          clickable: false,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+       {reviews.map(({company, content, name, imgSrc},key)=>{
+          return(
+            <SwiperSlide>
+          <ReviewCard company={company} content={content} name={name} imgSrc={imgSrc} key={key} />
+          </SwiperSlide>
+          )
+        })}
         
-      </div>
-        </div>
-    </section>
-  )
+      </Swiper>
+    </>
+  );
 }
-
-export default CReview
