@@ -11,16 +11,31 @@ import {ReactLenis} from 'lenis/react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
-
+import Footer from './Components/Footer/Footer';
+import Loader from './Components/Loader/Loader';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const App = () => {
+  const [loaded, setloaded] = useState(true);
+  window.onload = ()=>{
+    setloaded(false)
+  }
   useGSAP(()=>{
     const elements = gsap.utils.toArray('.reveal-up')
     console.log(elements)
   })
+
+
+useEffect(() => {
+    const handleLoad = () => setloaded(false);
+    window.addEventListener("load", handleLoad);
+
+    return () => window.removeEventListener("load", handleLoad);
+}, []);
   return (
     <ReactLenis root>
       <Header />
@@ -32,7 +47,8 @@ const App = () => {
         <CReview />
      
         <Contact />
-
+      <Footer / >
+      <Loader loaded={loaded} />
       </main>
 
       </ReactLenis>

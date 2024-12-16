@@ -3,43 +3,22 @@ import PropTypes from "prop-types";
 // Import Swiper React components
 
 
-const rating = new Array(5);
-rating.fill(
-    {
-        icon : 'star',
-        style : {
-            fontVariationSettings : '"FILL" 1'
-        }
-    }
-)
-const ReviewCard = ({content, name, imgSrc, company}) => {
+
+const ReviewCard = ({ name, imgSrc, link}) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px] ">
-        <div className="flex items-center gap-1 mb-3">
-        {
-           rating.map(({icon, style}, key)=>{
-            return(
-               <span className="material-symbols-rounded text-yellow-300 text-[18px] " key={key} style={style}>
-                {icon}
-               </span>
-            )
-           })
-        }
-        </div>
-
-        <p className="text-zinc-400 mb-8">
-            {content}
-        </p>
-        <div className="flex items-center gap-2 mt-auto">
+         
+        <div className="flex  gap-2 mt-auto flex-col items-start">
         <figure className="img-box rounded-lg">
                 <img src={imgSrc} alt={name} className="img-cover" height={44} width={44} loading="lazy"/>
         </figure>
-        <div>
-            <p>{name}</p>
-            <p className="text-xs text-zinc-400 tracking-wider">
-            {company}
-            </p>
-        </div>
+       
+      <a href={link} target="_blank">
+      <button className="bg-cyan-700 p-2 rounded-lg hover:bg-cyan-800">
+          <span className="material-symbols-rounded flex justify-center items-center" aria-hidden='true'>
+                    arrow_outward
+                </span>
+        </button></a> 
         </div>
         
     </div>

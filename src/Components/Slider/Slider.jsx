@@ -6,49 +6,62 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+
 import '../../index.css';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 export default function Slider() {
   const reviews = [
     {
-      content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
-      name: 'Sophia Ramirez',
-      imgSrc: '/images/people-1.jpg',
-      company: 'PixelForge'
+   
+      imgSrc: '/images/people-1.png',
+      link : 'https://www.figma.com/design/NZOrRsk2uHQcpeCM7kosbG/Hello?node-id=0-1&t=mgck7yhUrib1kWC5-1'
+ 
     },
     {
-      content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
-      name: 'Ethan Caldwell',
-      imgSrc: '/images/people-2.jpg',
-      company: 'NexaWave'
+     
+      imgSrc: '/images/people-2.png',
+      link : 'https://www.figma.com/design/EHEeQJPyHZjqG3CakWfmw3/BMW-i4?t=mgck7yhUrib1kWC5-1'
+    
     },
     {
-      content: 'Outstanding developer! Built a robust site with perfect functionality. Efficient and detail-oriented.',
-      name: 'Liam Bennett',
-      imgSrc: '/images/people-3.jpg',
-      company: 'CodeCraft'
+     
+      imgSrc: '/images/people-3.png',
+      link : 'https://www.figma.com/design/LDAYX5ZpGDrKrRbt47Gg4E/Sea?t=mgck7yhUrib1kWC5-1'
+      
     },
     {
-      content: 'Creative and skilled! Produced a modern, user-friendly site that exceeded expectations. Great communication.',
-      name: 'Noah Williams',
-      imgSrc: '/images/people-4.jpg',
-      company: 'BrightWeb'
+    
+      imgSrc: '/images/people-4.png',
+      link : 'https://www.figma.com/design/K5V6IQswxRfWsmkPkvYJmc/Game-Console?t=mgck7yhUrib1kWC5-1'
+  
     },
     {
-      content: 'Professional work! Delivered on time, with a polished design and smooth user experience. Top-notch developer.',
-      name: 'Ava Thompson',
-      imgSrc: '/images/people-5.jpg',
-      company: 'TechMosaic'
+    
+      imgSrc: '/images/people-5.png',
+      link : 'https://www.figma.com/design/IuFTk7V78EDW6JJOLLmZCu/Educational-Website-Hero?t=mgck7yhUrib1kWC5-1'
+      
     },
     {
-      content: 'Excellent project execution! High-quality code, responsive design, and exceptional problem-solving skills.',
-      name: 'Jonathan',
-      imgSrc: '/images/people-6.jpg',
-      company: 'Skyline Digital'
+    
+      imgSrc: '/images/people-6.png',
+      link : 'https://www.figma.com/design/ib1P1adqjWmqgSmqgzHCNf/Nidhi-FInserv?t=mgck7yhUrib1kWC5-1'
+     
+    }
+    ,
+    {
+    
+      imgSrc: '/images/people-7.png',
+      link : 'https://www.figma.com/design/1OrquRgAeu1U2Y9hHVIwV7/Background-Assignment?t=mgck7yhUrib1kWC5-1'
+     
+    },
+    {
+
+      imgSrc: '/images/people-8.png',
+      link : 'https://www.figma.com/design/rbITb57lpKinY3t6yCFJ6v/Tier?t=mgck7yhUrib1kWC5-1'
     }
   ];
   const points= {
@@ -60,25 +73,28 @@ export default function Slider() {
     }}
   return (
     <>
-      <Swiper
-        // slidesPerView={2}
-        spaceBetween={30}
-        breakpoints={points}
-        pagination={{
-          clickable: false,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-       {reviews.map(({company, content, name, imgSrc},key)=>{
-          return(
-            <SwiperSlide>
-          <ReviewCard company={company} content={content} name={name} imgSrc={imgSrc} key={key} />
-          </SwiperSlide>
-          )
-        })}
-        
-      </Swiper>
+     <Swiper
+  spaceBetween={30}
+  breakpoints={points}
+  pagination={{
+    clickable: true, // Also set to true to ensure pagination works if needed
+  }}
+  autoplay={{ // Use lowercase 'autoplay'
+    delay: 2500,
+    disableOnInteraction: true,
+  }}
+  modules={[Pagination, Autoplay]}
+  className="mySwiper"
+>
+  {reviews.map(({imgSrc, link }, key) => {
+    return (
+      <SwiperSlide key={key}>
+        <ReviewCard  imgSrc={imgSrc} key={key}  link={link}/>
+      </SwiperSlide>
+    );
+  })}
+</Swiper>
+
     </>
   );
 }

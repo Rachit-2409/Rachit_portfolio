@@ -22,14 +22,14 @@ const Skills = () => {
           desc: 'Web Server'
         },
         {
-          imgSrc: '/images/expressjs.svg',
-          label: 'ExpressJS',
-          desc: 'Node Framework'
+          imgSrc: '/images/HTML.png',
+          label: 'HTML',
+          desc: 'Markup language'
         },
         {
-          imgSrc: '/images/mongodb.svg',
-          label: 'MongoDB',
-          desc: 'Database'
+          imgSrc: '/images/WordPress.png',
+          label: 'WordPress',
+          desc: 'Content Management System'
         },
         {
           imgSrc: '/images/react.svg',
