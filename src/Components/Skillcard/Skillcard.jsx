@@ -26,8 +26,6 @@ Skillcard.propTypes = {
   classes: PropTypes.string,
 };
 
-Skillcard.defaultProps = {
-  classes: "",
-};
+
 
 export default Skillcard;

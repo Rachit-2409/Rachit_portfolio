@@ -18,7 +18,7 @@ const CReview = () => {
   // })
   
   return (
-    <section className="section overflow-hidden" id="reviews">
+    <section className="section overflow-hidden" id="figma">
         <div className="container">
       <h2 className="headline-2 mb-8"> 
         Figma Designs

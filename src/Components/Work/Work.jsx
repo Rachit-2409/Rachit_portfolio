@@ -39,7 +39,7 @@ const Work = () => {
         },
       ];
   return (
-   <section className="section" id="work">
+   <section className="section" id="portfolio">
         <div className="container">
         
 

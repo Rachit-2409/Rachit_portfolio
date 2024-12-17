@@ -26,7 +26,7 @@ const Hero = () => {
 Turning Designs into Digital Masterpieces</h2>
 
                     <div className='flex items-center gap-3'>
-                       <Button label="Download Resume" icon="download" />
+                       <Button label="Download Resume" icon="download" href='https://www.google.com/' target='_blank'/>
                         <ButtonOutline  label="Scroll Down" href='#about' icon="arrow_downward" />
                     </div>
                 </div>
